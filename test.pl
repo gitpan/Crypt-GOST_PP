@@ -12,20 +12,15 @@ ok(1); # If we made it this far, we're ok.
 
 #########################
 
-$text = "This is an encryption test use Crypt::GOST_PP";
+$text = "This is an encryption test using Crypt::GOST_PP";
 $pp   = "passphrase";
 $ref  = Crypt::GOST_PP->new( $pp );
 $enc  = $ref->encrypt( $text );
 $ref2 = Crypt::GOST_PP->new( $pp );
 $dec  = $ref2->decrypt( $enc );
-
-print <<END;
-Original Text:  $text
------
-Passphrase:     $pp
------
-Cipher Text:    $enc
------
-Decrypted Text: $dec
-END
-
+chomp $dec;
+if ( $dec =~ /^$text/ ) {
+    print ("ok 2\n");
+} else {
+    print ("not ok 2\n");
+}

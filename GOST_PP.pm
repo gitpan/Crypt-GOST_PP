@@ -1,7 +1,7 @@
 #--------------------------------------------------------------------#
 # Crypt::GOST_PP
 #       Date Written:   10-Dec-2001 12:33:55 PM
-#       Last Modified:  16-Jan-2002 03:38:29 PM
+#       Last Modified:  17-Jan-2002 12:08:39 PM
 #       Author:         Kurt Kincaid (sifukurt@yahoo.com)
 #       Copyright (c) 2002, Kurt Kincaid
 #           All Rights Reserved.
@@ -22,7 +22,7 @@ no strict 'refs';
 
 use vars qw( @b @t @R @S @h @o @K $VERSION );
 
-$VERSION = "1.01";
+$VERSION = "1.01b";
 
 sub new {
     my ( $argument, $pp ) = @_;

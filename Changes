@@ -1,5 +1,10 @@
 Revision history for Perl extension Crypt::GOST_PP.
 
+1.01b Thu Jan 17 12:08:38 2002
+        - Fixed test.pl to not print ciphertext to screen. The
+          non-printable characters were causing problems on some
+          systems. I apologize for any inconvenience.
+
 1.01  Wed Jan 16 15:37:46 2002
         - Added "use integer," providing a speed increase of around 30%.
 

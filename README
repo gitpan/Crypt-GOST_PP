@@ -1,5 +1,5 @@
-Crypt/GOST_PP version 1.01
-==========================
+Crypt/GOST_PP version 1.01b
+===========================
 
 Crypt::GOST_PP is a pure perl implementation of GOST, a 64-bit 
 symmetrical block cipher with a 256-bit key from the former Soviet
