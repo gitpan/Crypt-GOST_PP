@@ -6,7 +6,7 @@
 # change 'tests => 1' to 'tests => last_test_to_print';
 
 use Test;
-BEGIN { plan tests => 1 };
+BEGIN { plan tests => 2 };
 use Crypt::GOST_PP;
 ok(1); # If we made it this far, we're ok.
 

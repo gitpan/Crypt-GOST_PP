@@ -1,7 +1,7 @@
 #--------------------------------------------------------------------#
 # Crypt::GOST_PP
 #       Date Written:   10-Dec-2001 12:33:55 PM
-#       Last Modified:  17-Jan-2002 12:08:39 PM
+#       Last Modified:  26-Feb-2002 10:47:28 AM
 #       Author:         Kurt Kincaid (sifukurt@yahoo.com)
 #       Copyright (c) 2002, Kurt Kincaid
 #           All Rights Reserved.
@@ -22,7 +22,7 @@ no strict 'refs';
 
 use vars qw( @b @t @R @S @h @o @K $VERSION );
 
-$VERSION = "1.01b";
+$VERSION = "1.10";
 
 sub new {
     my ( $argument, $pp ) = @_;
@@ -52,7 +52,7 @@ sub GOST {
         $v = N( $e, $a );
         $w = N( $e, ( $a += 8 ) - 4 );
         grep $q++ % 2 ? $v ^= F( $w + $K[ $_ ] ) : ( $w ^= F( $v + $K[ $_ ] ) ), $d ? ( @h, ( @o ) x 3 ) : ( ( @h ) x 3, @o );
-        $out .= pack N2, $w, $v;
+        $out .= pack "N2", $w, $v;
     }
     return $out;
 }
@@ -64,7 +64,7 @@ sub F {
 }
 
 sub R {
-    return int( (shift) * rand );
+    return int( rand( shift ) );
 }
 
 sub N {
