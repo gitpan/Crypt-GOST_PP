@@ -1,4 +1,7 @@
 Revision history for Perl extension Crypt::GOST_PP.
 
+1.01  Wed Jan 16 15:37:46 2002
+        - Added "use integer," providing a speed increase of around 30%.
+
 1.0   Mon Dec 10 12:43:17 2001
         - first public release

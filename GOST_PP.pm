@@ -1,9 +1,9 @@
 #--------------------------------------------------------------------#
 # Crypt::GOST_PP
 #       Date Written:   10-Dec-2001 12:33:55 PM
-#       Last Modified:  10-Dec-2001 01:12:24 PM
+#       Last Modified:  16-Jan-2002 03:38:29 PM
 #       Author:         Kurt Kincaid (sifukurt@yahoo.com)
-#       Copyright (c) 2001, Kurt Kincaid
+#       Copyright (c) 2002, Kurt Kincaid
 #           All Rights Reserved.
 #
 #       This is free software and may be modified and/or
@@ -11,6 +11,7 @@
 #--------------------------------------------------------------------#
 
 package Crypt::GOST_PP;
+use integer;
 require Exporter;
 
 @ISA = qw(Exporter);
@@ -21,7 +22,7 @@ no strict 'refs';
 
 use vars qw( @b @t @R @S @h @o @K $VERSION );
 
-$VERSION = "1.0";
+$VERSION = "1.01";
 
 sub new {
     my ( $argument, $pp ) = @_;
@@ -103,20 +104,25 @@ Crypt::GOST_PP - Pure Perl implementation of the GOST encryption algorithm
 
 =head1 DESCRIPTION
 
-GOST is a 64-bit symmectric block cipher with a 256-bit key, from the former Soviet Union.
+GOST is a 64-bit symmectric block cipher with a 256-bit key, from the
+former Soviet Union.
 
-It is important to note that there are (or have been) several other GOST encryption modules for
-perl. This version is in no way intended to supersede any other such implementations, specifically
-Crypt::GOST. The purpose for writing this module was that I do a great deal of work on Win32 systems,
-and I have been unsuccessful in my attempts to get Crypt::GOST to install correctly in that
-environment. A previous version of Crypt::GOST, v0.41, was also a pure perl implementation, but it lacked
-documentation, and as such it was more difficult to use than one would prefer. As a result of these
-two things, I wanted to write a pure perl implementation, with requisite documentation,  that will
-run regardless of the OS.
+It is important to note that there are (or have been) several other GOST
+encryption modules for perl. This version is in no way intended to
+supersede any other such implementations, specifically Crypt::GOST. The
+purpose for writing this module was that I do a great deal of work on
+Win32 systems, and I have been unsuccessful in my attempts to get
+Crypt::GOST to install correctly in that environment. A previous version
+of Crypt::GOST, v0.41, was also a pure perl implementation, but it
+lacked documentation, and as such it was more difficult to use than one
+would prefer. As a result of these two things, I wanted to write a pure
+perl implementation, with requisite documentation, that will run
+regardless of the OS.
 
-Much of the core logic of Crypt::GOST_PP was originally based on Vipul Ved Prakash's
-"GOST in 417 bytes of Perl" L<http://www.vipul.net/gost/>. The code contained herein has
-undergone numerous revisions and modifications since that original diminutive implementation.
+Much of the core logic of Crypt::GOST_PP was originally based on Vipul
+Ved Prakash's "GOST in 417 bytes of Perl" L<http://www.vipul.net/gost/>.
+The code contained herein has undergone numerous revisions and
+modifications since that original diminutive implementation.
 
 =head1 AUTHOR
 

@@ -1,4 +1,4 @@
-Crypt/GOST_PP version 1.0
+Crypt/GOST_PP version 1.01
 ==========================
 
 Crypt::GOST_PP is a pure perl implementation of GOST, a 64-bit 
@@ -22,5 +22,5 @@ COPYRIGHT AND LICENCE
 This module is free software and may be modified and/or 
 redistributed under the same terms as Perl itself.
 
-Copyright (C) 2001, Kurt Kincaid <sifukurt@yahoo.com>
+Copyright (C) 2002, Kurt Kincaid <sifukurt@yahoo.com>
 
